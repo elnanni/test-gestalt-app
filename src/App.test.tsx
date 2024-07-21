@@ -1,9 +1,12 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import React from "react";
+import { render, queryByAttribute } from "@testing-library/react";
+import App from "./App";
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+test("renders volunteers Gestalt test page", () => {
+  const appContainer = render(<App />).container;
+  const headerElement = queryByAttribute.bind(null, "id")(
+    appContainer,
+    "App-header",
+  );
+  expect(headerElement).toBeInTheDocument();
 });
