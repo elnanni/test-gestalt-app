@@ -1,3 +1,9 @@
+const locatorsDataTestId = {
+    PERSONAL_DATA_BIRTHDAY_DTI: '[data-test-id="birthday"]',
+    FAVORITE_COLOR_DTI: '[data-test-id="favorite-color"]',
+    ACCORDION_ARROW_DTI: '[data-test-id="personal-data-accordion-arrow"]',
+}
+
 const locators = {
   // Global
   BODY: "body",
@@ -29,6 +35,6 @@ const locators = {
   COLOR_BLUE: '[title="blue"]',
 };
 
-const GestaltTestPage = { ...locators };
+const GestaltTestPage = { ...locators, ...locatorsDataTestId };
 
 export default GestaltTestPage;

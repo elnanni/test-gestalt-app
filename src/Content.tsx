@@ -57,6 +57,7 @@ const Content = () => {
           </Box>
         </Box>
         <Tabs
+          dataTestId="options-tabs"
           bgColor="transparent"
           activeTabIndex={activeIndex}
           onChange={({ activeTabIndex, event }) => {
@@ -72,6 +73,7 @@ const Content = () => {
       <Box color="light">
         {activeIndex === 0 && (
           <Accordion.Expandable
+            dataTestId="personal-data-accordion"
             borderStyle="shadow"
             id="personal-data"
             items={[
@@ -92,6 +94,7 @@ const Content = () => {
                         value={pName}
                       />
                       <DatePicker
+                        dataTestId="birthday"
                         ref={ref}
                         placeholder="Enter birthday"
                         value={birthday}
@@ -101,6 +104,7 @@ const Content = () => {
                         id="birthday"
                       />
                       <ComboBox
+                        dataTestId="favorite-color"
                         placeholder="Enter favorite color"
                         id="favorite-color"
                         label="Favorite color"

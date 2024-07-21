@@ -24,13 +24,13 @@ describe("Gestalt test implementation validation", () => {
     cy.get(GestaltTestPage.A).contains("Personal data").click();
     cy.get(GestaltTestPage.PERSONAL_DATA_TITLE).should("be.visible");
     cy.get(GestaltTestPage.DIV).should("contain", "Fill personal data");
-    cy.get(GestaltTestPage.ACCORDION_ARROW).click();
+    cy.get(GestaltTestPage.ACCORDION_ARROW_DTI).click();
     cy.get(GestaltTestPage.PERSONAL_DATA_NAME).type("Juan Benavides");
-    cy.get(GestaltTestPage.PERSONAL_DATA_BIRTHDAY).click();
+    cy.get(GestaltTestPage.PERSONAL_DATA_BIRTHDAY_DTI).click();
     for (let i = 0; i < 24; i++)
       cy.get(GestaltTestPage.BIRTHDAY_PREV_MONTH).click();
     cy.get(GestaltTestPage.BIRTHDAY_DAY_5).first().click();
-    cy.get(GestaltTestPage.FAVORITE_COLOR).click();
+    cy.get(GestaltTestPage.FAVORITE_COLOR_DTI).click();
     cy.get(GestaltTestPage.COLOR_BLUE).click();
     cy.get(GestaltTestPage.ACCORDION_ARROW).click();
     cy.get(GestaltTestPage.DIV).should("contain", "Name: Juan Benavides");
