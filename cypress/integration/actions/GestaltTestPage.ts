@@ -1,7 +1,10 @@
 const locatorsDataTestId = {
     PERSONAL_DATA_BIRTHDAY_DTI: '[data-test-id="birthday"]',
     FAVORITE_COLOR_DTI: '[data-test-id="favorite-color"]',
+    ACCORDION: '[data-test-id="personal-data-accordion-taparea"]',
     ACCORDION_ARROW_DTI: '[data-test-id="personal-data-accordion-arrow"]',
+    TAB_PERSONAL_DATA: '[data-test-id="options-tabs-0"]',
+    TAB_TAB_2: '[data-test-id="options-tabs-1"]',
 }
 
 const locators = {

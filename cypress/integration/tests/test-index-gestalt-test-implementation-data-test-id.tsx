@@ -23,7 +23,7 @@ describe("Gestalt test implementation validation", () => {
       .should("include", "81310591");
     cy.get(GestaltTestPage.TAB_PERSONAL_DATA).click();
     cy.get(GestaltTestPage.PERSONAL_DATA_TITLE).should("be.visible");
-    cy.get(GestaltTestPage.DIV).should("contain", "Fill personal data");
+    cy.get(GestaltTestPage.ACCORDION).should("contain", "Fill personal data");
     cy.get(GestaltTestPage.ACCORDION_ARROW_DTI).click();
     cy.get(GestaltTestPage.PERSONAL_DATA_NAME).type("Juan Benavides");
     cy.get(GestaltTestPage.PERSONAL_DATA_BIRTHDAY_DTI).click();
@@ -33,9 +33,9 @@ describe("Gestalt test implementation validation", () => {
     cy.get(GestaltTestPage.FAVORITE_COLOR_DTI).click();
     cy.get(GestaltTestPage.COLOR_BLUE).click();
     cy.get(GestaltTestPage.ACCORDION_ARROW).click();
-    cy.get(GestaltTestPage.DIV).should("contain", "Name: Juan Benavides");
-    cy.get(GestaltTestPage.DIV).should("contain", "Age: 2");
-    cy.get(GestaltTestPage.DIV).should("contain", "Color: blue");
+    cy.get(GestaltTestPage.ACCORDION).should("contain", "Name: Juan Benavides");
+    cy.get(GestaltTestPage.ACCORDION).should("contain", "Age: 2");
+    cy.get(GestaltTestPage.ACCORDION).should("contain", "Color: blue");
     cy.get(GestaltTestPage.TAB_TAB_2).click();
     cy.get(GestaltTestPage.DIV).should("contain", "Tab 2 selected");
   });

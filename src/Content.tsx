@@ -1,4 +1,4 @@
-import { Accordion, Avatar, Box, ComboBox, Tabs, TextField } from "gestalt";
+import { Accordion, Avatar, Box, ComboBox, Pog, Tabs, TextField } from "gestalt";
 import { useRef, useState } from "react";
 import { DatePicker } from "gestalt-datepicker";
 
@@ -137,6 +137,7 @@ const Content = () => {
         )}
         {activeIndex === 1 && "Tab 2 selected"}
       </Box>
+      <Pog dataTestId="pog-heart" icon="heart" />
     </Box>
   );
 };
