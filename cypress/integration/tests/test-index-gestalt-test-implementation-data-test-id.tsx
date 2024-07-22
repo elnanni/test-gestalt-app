@@ -10,6 +10,14 @@ describe("Gestalt test implementation validation", () => {
     cy.get(GestaltTestPage.CONTENT_HEADER).should("be.visible");
     cy.get(GestaltTestPage.GESTALT_LINK).should("be.visible");
     cy.get(GestaltTestPage.GESTALT_EXTERNAL).should("be.visible");
+    cy.get(GestaltTestPage.TAB_GESTALT_VOLUNTEERS).should(
+      "contain",
+      "Gestalt Volunteers!",
+    );
+    cy.get(GestaltTestPage.TAB_GESTALT_VOLUNTEERS_IMPLEMENTATION).should(
+      "contain",
+      "This is our awesome implementation test for Gestalt",
+    );
     cy.get(GestaltTestPage.AVATAR_URL).type("2");
     cy.get(GestaltTestPage.BODY).click();
     cy.get(GestaltTestPage.AVATAR_ERROR).should("be.visible");

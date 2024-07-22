@@ -16,7 +16,9 @@ const Header = () => {
               />
             }
           >
-            <Text align="center">Gestalt Volunteers!</Text>
+            <Text dataTestId="gestalt-volunteers" align="center">
+              Gestalt Volunteers!
+            </Text>
             <ButtonLink
               href="https://github.com/elnanni/gestalt/tree/makeathonDataTestId"
               target="blank"
@@ -30,7 +32,7 @@ const Header = () => {
         </Box>
       </Box>
       <Box marginTop={4} padding={2} id="header-content" display="inlineBlock">
-        <Text>
+        <Text dataTestId="gestalt-volunteers-implementation">
           This is our awesome implementation test for{" "}
           <Link
             dataTestId="gestalt-link"
