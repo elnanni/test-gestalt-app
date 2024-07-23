@@ -145,7 +145,7 @@ const Content = () => {
         )}
         {activeIndex === 1 && "Tab 2 selected"}
       </Box>
-      <Pog dataTestId="pog-heart" icon="heart" />
+      <Box margin={2} justifyContent="end" alignContent="end" display="flex"><Pog dataTestId="pog-heart" icon="heart" /></Box>
     </Box>
   );
 };

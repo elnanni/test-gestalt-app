@@ -5,14 +5,14 @@ const Header = () => {
   return (
     <Box id="App-header">
       <Box>
-        <Box id="logo-container" width={300} display="inlineBlock">
+        <Box id="logo-container" height={300} width={200} display="inlineBlock">
           <WashAnimated
             image={
               <Image
                 src={logo}
                 alt="logo"
                 naturalHeight={50}
-                naturalWidth={125}
+                naturalWidth={50}
               />
             }
           >
