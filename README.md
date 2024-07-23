@@ -1,7 +1,9 @@
 # Integration test recording
+
 [[Watch the video]](https://drive.google.com/file/d/1Pm6MayI-wbbTFEWZ5DizsaYhqVjd0-F1/view)
 
 # Component test recording
+
 [[Watch the video]](https://drive.google.com/file/d/1L2T5NNNg6FsKqbGTS9-ZJ0zEYgl7GzBP/view)
 
 # Getting Started with Create React App
