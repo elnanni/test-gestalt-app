@@ -23,9 +23,8 @@ describe("<Content />", () => {
   });
   it("change tabs", () => {
     cy.mount(<Content />);
-    cy.get("a").contains("Personal data").click();
+    cy.get("[data-test-id='options-tabs-0']").click();
     cy.get('[title="Personal data"]').should("be.visible");
-    cy.get("a").contains("Tab 2").click();
-    cy.get("div").should("contain", "Tab 2 selected");
+    cy.get("[data-test-id='options-tabs-1']").click();
   });
 });

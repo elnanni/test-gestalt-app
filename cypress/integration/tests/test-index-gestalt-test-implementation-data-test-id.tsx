@@ -45,6 +45,5 @@ describe("Gestalt test implementation validation", () => {
     cy.get(GestaltTestPage.ACCORDION).should("contain", "Age: 2");
     cy.get(GestaltTestPage.ACCORDION).should("contain", "Color: blue");
     cy.get(GestaltTestPage.TAB_TAB_2).click();
-    cy.get(GestaltTestPage.DIV).should("contain", "Tab 2 selected");
   });
 });

@@ -2,6 +2,7 @@ import {
   Accordion,
   Avatar,
   Box,
+  Checkbox,
   ComboBox,
   Pog,
   Tabs,
@@ -9,6 +10,9 @@ import {
 } from "gestalt";
 import { useRef, useState } from "react";
 import { DatePicker } from "gestalt-datepicker";
+import Images from "./Images";
+import Banners from "./Banners";
+import Randoms from "./Randoms";
 
 interface colorData {
   label: string;
@@ -74,7 +78,9 @@ const Content = () => {
           }}
           tabs={[
             { href: "#", text: "Personal data" },
-            { href: "#", text: "Tab 2" },
+            { href: "#", text: "Images" },
+            { href: "#", text: "Banners" },
+            { href: "#", text: "Randoms" },
           ]}
         />
       </Box>
@@ -126,6 +132,13 @@ const Content = () => {
                         }}
                         inputValue={color?.value}
                       />
+                      <Checkbox
+                        dataTestId="employee"
+                        id="id"
+                        label="Name"
+                        onChange={() => {}}
+                        size="sm"
+                      />
                     </Box>
                   </Box>
                 ),
@@ -143,9 +156,13 @@ const Content = () => {
             ]}
           />
         )}
-        {activeIndex === 1 && "Tab 2 selected"}
+        {activeIndex === 1 && <Images />}
+        {activeIndex === 2 && <Banners />}
+        {activeIndex === 3 && <Randoms />}
       </Box>
-      <Box margin={2} justifyContent="end" alignContent="end" display="flex"><Pog dataTestId="pog-heart" icon="heart" /></Box>
+      <Box margin={2} justifyContent="end" alignContent="end" display="flex">
+        <Pog dataTestId="pog-heart" icon="heart" />
+      </Box>
     </Box>
   );
 };
