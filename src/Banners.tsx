@@ -8,7 +8,6 @@ import {
   Box,
   Datapoint,
   SideNavigation,
-  TextField,
 } from "gestalt";
 
 const Banners = () => {
@@ -36,7 +35,6 @@ const Banners = () => {
           accessibilityLabel="Side Nav"
         >
           <SideNavigation.Group
-            dataTestId="sidenavigation-group"
             label="sn-group"
           >
             <SideNavigation.NestedItem
