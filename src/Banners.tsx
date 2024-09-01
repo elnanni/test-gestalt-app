@@ -1,4 +1,5 @@
 import {
+  Accordion,
   ActivationCard,
   Badge,
   BannerCallout,
@@ -8,11 +9,22 @@ import {
   Box,
   Datapoint,
   SideNavigation,
+  Text,
 } from "gestalt";
 
 const Banners = () => {
   return (
     <Box margin={4} padding={4}>
+      <Accordion
+        dataTestId="test-accordion"
+        icon="lock"
+        iconAccessibilityLabel="there is an error"
+        id="accordion-test"
+        title="Testing"
+        type="error"
+      >
+        <Text>Testing</Text>
+      </Accordion>
       <BannerSlim dataTestId="banner-slim" message="Banner Slim" />
       <BannerUpsell dataTestId="banner-upsell" message="Banner Upsell" />
       <BannerCallout
