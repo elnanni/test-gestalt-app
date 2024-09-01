@@ -107,7 +107,7 @@ const Randoms = () => {
       )}
       <Icon dataTestId="icon" accessibilityLabel="icon" icon="person-add" />
       <IconButtonFloating
-        dataTestId="icon-button-floating"
+        //dataTestId="icon-button-floating"
         ref={anchorRef}
         accessibilityControls="sections-dropdown-example"
         accessibilityExpanded={open}
@@ -120,18 +120,18 @@ const Randoms = () => {
           text: "Create Pin Menu",
         }}
       />
-      <Label dataTestId="label" htmlFor="email">
+      <Label /*dataTestId="label"*/ htmlFor="email">
         Email
       </Label>
       <List label="label test" type="bare">
-        <List.Item dataTestId="list-item-1" text="List item text">
-          <List.Item dataTestId="list-item-2" text="List item text" />
+        <List.Item /*dataTestId="list-item-1"*/ text="List item text">
+          <List.Item /*dataTestId="list-item-2"*/ text="List item text" />
         </List.Item>
       </List>
       {showComponent && (
         <Modal
           accessibilityModalLabel="Test modal"
-          dataTestId={"modal"}
+          //dataTestId={"modal"}
           footer={
             <Flex gap={2} justifyContent="end">
               <Button
@@ -171,7 +171,7 @@ const Randoms = () => {
           accessibilityDismissButtonLabel="Dismiss"
           accessibilityLabel="OverlayPanel"
           closeOnOutsideClick
-          dataTestId="overlay-panel"
+          //dataTestId="overlay-panel"
           footer={<footer />}
           heading="OverlayPanel title"
           onDismiss={() => {
@@ -187,7 +187,7 @@ const Randoms = () => {
         <Popover
           accessibilityLabel="text"
           anchor={anchorRef.current}
-          dataTestId="popover"
+          //dataTestId="popover"
           onDismiss={() => setShowPopOver(false)}
         >
           <Text>Custom children</Text>
@@ -197,7 +197,7 @@ const Randoms = () => {
         <PopoverEducational
           accessibilityLabel="test"
           anchor={anchorRef.current}
-          dataTestId="popover-educational"
+          //dataTestId="popover-educational"
           message="text"
           onDismiss={() => setShowPopOverEducational(false)}
           primaryAction={{ text: "next", role: "button", onClick: () => {} }}
@@ -205,13 +205,13 @@ const Randoms = () => {
         />
       )}
       <RadioGroup
-        dataTestId="radio-group-test-id"
+        //dataTestId="radio-group-test-id"
         direction="row"
         id="radioGroup"
         legend="Options"
       >
         <RadioGroup.RadioButton
-          dataTestId="radio-button-test-id"
+          //dataTestId="radio-button-test-id"
           id="choice-1"
           name="choice"
           onChange={() => {}}
@@ -219,7 +219,7 @@ const Randoms = () => {
           label="Choice 1"
         />
         <RadioGroup.RadioButton
-          dataTestId="radio-button-test-id"
+          //dataTestId="radio-button-test-id"
           id="choice-1"
           name="choice"
           onChange={() => {}}

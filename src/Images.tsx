@@ -11,7 +11,7 @@ import {
   Pulsar,
   Text,
 } from "gestalt";
-import { ReactNode, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 function getPins() {
   const pins = [
@@ -59,7 +59,7 @@ function GridComponent({ data, dataTestId }: any) {
   return (
     <Flex direction="column">
       <Image
-        dataTestId={dataTestId}
+        //dataTestId={dataTestId}
         alt={data.name}
         color={data.color}
         naturalHeight={data.height}
@@ -93,17 +93,17 @@ const Images = () => {
       padding={4}
       width="100%"
     >
-      <Pulsar dataTestId="pulsar" />
+      <Pulsar /*dataTestId="pulsar"*/ />
       <HelpButton
         accessibilityLabel="Click to learn more about Pinterest"
         accessibilityPopoverLabel="Expanded information about Pinterest"
-        dataTestId="help-button"
+        //dataTestId="help-button"
         text="Good test"
       />
-      <PageHeader dataTestId="masonry-header" title={"Masonry header"} />
+      <PageHeader /*dataTestId="masonry-header"*/ title={"Masonry header"} />
       {scrollContainerRef.current && (
         <Masonry
-          dataTestId="masonry-container"
+          //dataTestId="masonry-container"
           ref={(ref: any) => {
             gridRef.current = ref;
           }}
@@ -119,10 +119,10 @@ const Images = () => {
           )}
         />
       )}
-      <PageHeader dataTestId="masonryV2-header" title={"Masonry V2 header"} />
+      <PageHeader /*dataTestId="masonryV2-header"*/ title={"Masonry V2 header"} />
       {scrollContainerRef.current && (
         <MasonryV2
-          dataTestId="masonryV2-container"
+          //dataTestId="masonryV2-container"
           ref={(ref: any) => {
             gridRef.current = ref;
           }}
@@ -138,9 +138,9 @@ const Images = () => {
           )}
         />
       )}
-      <PageHeader dataTestId="collage-section" title={"Collage"} />
+      <PageHeader /*dataTestId="collage-section"*/ title={"Collage"} />
       <Collage
-        dataTestId="collage"
+        //dataTestId="collage"
         columns={2}
         height={500}
         renderImage={({ index, width, height }) => {
@@ -184,9 +184,9 @@ const Images = () => {
           ];
           const image = images[index] || {};
           return (
-            <Mask dataTestId="collage-mask" height={height} wash width={width}>
+            <Mask /*dataTestId="collage-mask"*/ height={height} wash width={width}>
               <Image
-                dataTestId={"collage-image-" + index}
+                //dataTestId={"collage-image-" + index}
                 alt="collage image"
                 color={image.color}
                 fit="cover"

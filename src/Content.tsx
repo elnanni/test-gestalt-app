@@ -69,7 +69,7 @@ const Content = () => {
           </Box>
         </Box>
         <Tabs
-          dataTestId="options-tabs"
+          //dataTestId="options-tabs"
           bgColor="transparent"
           activeTabIndex={activeIndex}
           onChange={({ activeTabIndex, event }) => {
@@ -87,7 +87,7 @@ const Content = () => {
       <Box color="light">
         {activeIndex === 0 && (
           <Accordion.Expandable
-            dataTestId="personal-data-accordion"
+            //dataTestId="personal-data-accordion"
             borderStyle="shadow"
             id="personal-data"
             items={[
@@ -108,7 +108,7 @@ const Content = () => {
                         value={pName}
                       />
                       <DatePicker
-                        dataTestId="birthday"
+                        //dataTestId="birthday"
                         ref={ref}
                         placeholder="Enter birthday"
                         value={birthday}
@@ -118,7 +118,7 @@ const Content = () => {
                         id="birthday"
                       />
                       <ComboBox
-                        dataTestId="favorite-color"
+                        //dataTestId="favorite-color"
                         placeholder="Enter favorite color"
                         id="favorite-color"
                         label="Favorite color"
@@ -133,7 +133,7 @@ const Content = () => {
                         inputValue={color?.value}
                       />
                       <Checkbox
-                        dataTestId="employee"
+                        //dataTestId="employee"
                         id="id"
                         label="Name"
                         onChange={() => {}}
@@ -161,7 +161,7 @@ const Content = () => {
         {activeIndex === 3 && <Randoms />}
       </Box>
       <Box margin={2} justifyContent="end" alignContent="end" display="flex">
-        <Pog dataTestId="pog-heart" icon="heart" />
+        <Pog /*dataTestId="pog-heart"*/ icon="heart" />
       </Box>
     </Box>
   );

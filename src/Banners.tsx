@@ -25,16 +25,15 @@ const Banners = () => {
       >
         <Text>Testing</Text>
       </Accordion>
-      <BannerSlim dataTestId="banner-slim" message="Banner Slim" />
-      <BannerUpsell dataTestId="banner-upsell" message="Banner Upsell" />
+      <BannerSlim /*dataTestId="banner-slim"*/ message="Banner Slim" />
+      <BannerUpsell /*dataTestId="banner-upsell"*/ message="Banner Upsell" />
       <BannerCallout
-        dataTestId="banner-callout"
+        //dataTestId="banner-callout"
         message="Banner Callout"
         type={"error"}
       />
-      <BannerOverlay dataTestId="banner-overlay" message="Banner Overlay" />
+      <BannerOverlay /*dataTestId="banner-overlay"*/ message="Banner Overlay" />
       <ActivationCard
-        dataTestId="activation-card"
         message="Activation card"
         status="notStarted"
         statusMessage={"Status"}
@@ -43,7 +42,7 @@ const Banners = () => {
       <Box width="300px" margin={4}>
         <Badge dataTestId="badge" text="Side Nav" type="recommendation" />
         <SideNavigation
-          dataTestId="side-navigation"
+          //dataTestId="side-navigation"
           accessibilityLabel="Side Nav"
         >
           <SideNavigation.Group
@@ -59,7 +58,7 @@ const Banners = () => {
       </Box>
       <Datapoint
         badge={{ text: "Early access" }}
-        dataTestId="data-point"
+        //dataTestId="data-point"
         title="Title"
         tooltipText="This is a good sign"
         trend={{
