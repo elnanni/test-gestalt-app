@@ -8,6 +8,18 @@ const locatorsDataTestId = {
   TAB_GESTALT_VOLUNTEERS: '[data-test-id="gestalt-volunteers"]',
   TAB_GESTALT_VOLUNTEERS_IMPLEMENTATION:
     '[data-test-id="gestalt-volunteers-implementation"]',
+  BADGE_NEW_ICON: '[data-test-id="badge-new-icon"]',
+  BADGE_NEW_TOOLTIP: '[data-test-id="badge-new-tooltip"]',
+  BADGE_NEW_TEXT: '[data-test-id="badge-new-text"]',
+  ACCORDION_ICON: '[data-test-id="test-accordion-icon"]',
+  ACCORDION_TITLE: '[data-test-id="test-accordion-text"]',
+  BADGE_ACCORDION_ICON: '[data-test-id="test-badge-accordion-icon"]',
+  BADGE_ACCORDION_TITLE: '[data-test-id="test-badge-accordion-text"]',
+  BADGE_ACCORDION_BADGE: '[data-test-id="test-badge-accordion-badge-text"]',
+  ICONBUTTON_ACCORDION_ICON: '[data-test-id="test-iconbutton-accordion-icon"]',
+  ICONBUTTON_ACCORDION_TITLE: '[data-test-id="test-iconbutton-accordion-text"]',
+  ICONBUTTON_ACCORDION_ICONBUTTON: '[data-test-id="accordion-icon-button"]',
+  ICONBUTTON_ACCORDION_POPOVER: '[data-test-id="accordion-popover-text"]',
 };
 
 const locators = {

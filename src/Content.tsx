@@ -1,11 +1,13 @@
 import {
   Accordion,
   Avatar,
+  Badge,
   Box,
   Checkbox,
   ComboBox,
   Pog,
   Tabs,
+  Text,
   TextField,
 } from "gestalt";
 import { useRef, useState } from "react";
@@ -79,7 +81,7 @@ const Content = () => {
           tabs={[
             { href: "#", text: "Personal data" },
             { href: "#", text: "Images" },
-            { href: "#", text: "Banners" },
+            { href: "#", text: <Box>Banners <Badge dataTestId="badge-new" text="New" type="recommendation" tooltip={{text: 'New'}} /></Box>, },
             { href: "#", text: "Randoms" },
           ]}
         />

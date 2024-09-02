@@ -1,4 +1,5 @@
 import "./App.css";
+import "./gestalt.css"
 import { Box, Divider } from "gestalt";
 import Header from "./Header";
 import Content from "./Content";

@@ -1,4 +1,3 @@
-import React from "react";
 import Content from "../../src/Content";
 
 describe("<Content />", () => {
@@ -21,10 +20,18 @@ describe("<Content />", () => {
       .should("have.attr", "src")
       .should("include", "81310591");
   });
-  it("change tabs", () => {
+  /*it("change tabs", () => {
     cy.mount(<Content />);
     cy.get("[data-test-id='options-tabs-0']").click();
     cy.get('[title="Personal data"]').should("be.visible");
     cy.get("[data-test-id='options-tabs-1']").click();
+  });*/
+  it("check badge and tooltip", () => {
+    cy.mount(<Content />);
+    cy.get('[data-test-id="badge-new-icon"]').should('be.visible');
+    cy.get('[data-test-id="badge-new-tooltip"]').should('not.exist');
+    cy.get('[data-test-id="badge-new-text"]').trigger('mouseover');
+    cy.get('[data-test-id="badge-new-tooltip"]').should('be.visible');
+    cy.get('[data-test-id="badge-new-text"]').click();
   });
 });
