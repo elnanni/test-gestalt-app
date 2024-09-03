@@ -4,9 +4,9 @@
       it("Validate Badge", () => {
         cy.visit("/");
         cy.get(GestaltTestPage.BADGE_NEW_ICON).should('be.visible');
-        cy.get(GestaltTestPage.BADGE_NEW_TOOLTIP).should('not.exist');
+        cy.get(GestaltTestPage.BADGE_NEW_TOOLTIP_TEXT).should('not.exist');
         cy.get(GestaltTestPage.BADGE_NEW_TEXT).trigger('mouseover');
-        cy.get(GestaltTestPage.BADGE_NEW_TOOLTIP).should('be.visible');
+        cy.get(GestaltTestPage.BADGE_NEW_TOOLTIP_TEXT).should('be.visible');
         cy.get(GestaltTestPage.BADGE_NEW_TEXT).click();
       });
       it("Validate Accordion", () => {

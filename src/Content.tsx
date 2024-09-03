@@ -7,7 +7,6 @@ import {
   ComboBox,
   Pog,
   Tabs,
-  Text,
   TextField,
 } from "gestalt";
 import { useRef, useState } from "react";

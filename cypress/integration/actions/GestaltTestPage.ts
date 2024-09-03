@@ -10,6 +10,7 @@ const locatorsDataTestId = {
     '[data-test-id="gestalt-volunteers-implementation"]',
   BADGE_NEW_ICON: '[data-test-id="badge-new-icon"]',
   BADGE_NEW_TOOLTIP: '[data-test-id="badge-new-tooltip"]',
+  BADGE_NEW_TOOLTIP_TEXT: '[data-test-id="badge-new-tooltip-text"]',
   BADGE_NEW_TEXT: '[data-test-id="badge-new-text"]',
   ACCORDION_ICON: '[data-test-id="test-accordion-icon"]',
   ACCORDION_TITLE: '[data-test-id="test-accordion-text"]',
