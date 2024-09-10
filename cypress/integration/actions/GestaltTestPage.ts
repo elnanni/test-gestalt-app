@@ -1,10 +1,9 @@
 const locatorsDataTestId = {
-  PERSONAL_DATA_BIRTHDAY_DTI: '[data-test-id="birthday"]',
+  PERSONAL_DATA_BIRTHDAY_DTI: "#birthday",
   FAVORITE_COLOR_DTI: '[data-test-id="favorite-color"]',
-  ACCORDION: '[data-test-id="personal-data-accordion-taparea"]',
-  ACCORDION_ARROW_DTI: '[data-test-id="personal-data-accordion-arrow"]',
-  TAB_PERSONAL_DATA: '[data-test-id="options-tabs-0"]',
-  TAB_TAB_2: '[data-test-id="options-tabs-1"]',
+  ACCORDION: '[aria-label="Expand section"]',
+  ACCORDION_ARROW_DTI: "#personal-data-0",
+  TAB: "a",
   TAB_GESTALT_VOLUNTEERS: '[data-test-id="gestalt-volunteers"]',
   TAB_GESTALT_VOLUNTEERS_IMPLEMENTATION:
     '[data-test-id="gestalt-volunteers-implementation"]',
@@ -29,11 +28,11 @@ const locators = {
   A: "a",
   DIV: "div",
   // Header
-  APP_HEADER: "#App-header",
-  LOGO_IMG: "#logo-container img",
+  APP_HEADER: "[data-test-id='app-header']",
+  IMAGE_LOGO: '[data-test-id="logo"]',
   FORK_BUTTON: '[data-test-id="volunteers-fork"]',
   FORK_EXTERNAL: '[data-test-id="volunteers-fork"] svg',
-  CONTENT_HEADER: "#header-content",
+  CONTENT_HEADER: '[data-test-id="header-content"]',
   GESTALT_LINK: '[data-test-id="gestalt-link"]',
   GESTALT_EXTERNAL: '[data-test-id="gestalt-link"] svg',
   // Content

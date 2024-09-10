@@ -4,7 +4,7 @@ describe("Gestalt test implementation validation", () => {
   it("Validate header", () => {
     cy.visit("/");
     cy.get(GestaltTestPage.APP_HEADER).should("be.visible");
-    cy.get(GestaltTestPage.LOGO_IMG).should("be.visible");
+    cy.get(GestaltTestPage.IMAGE_LOGO).should("be.visible");
     cy.get(GestaltTestPage.FORK_BUTTON).should("be.visible");
     cy.get(GestaltTestPage.FORK_EXTERNAL).should("be.visible");
     cy.get(GestaltTestPage.CONTENT_HEADER).should("be.visible");
@@ -29,7 +29,7 @@ describe("Gestalt test implementation validation", () => {
     cy.get(GestaltTestPage.AVATAR_IMG)
       .should("have.attr", "src")
       .should("include", "81310591");
-    cy.get(GestaltTestPage.TAB_PERSONAL_DATA).click();
+    cy.get(GestaltTestPage.TAB).contains("Personal data").click();
     cy.get(GestaltTestPage.PERSONAL_DATA_TITLE).should("be.visible");
     cy.get(GestaltTestPage.ACCORDION).should("contain", "Fill personal data");
     cy.get(GestaltTestPage.ACCORDION_ARROW_DTI).click();
@@ -38,12 +38,13 @@ describe("Gestalt test implementation validation", () => {
     for (let i = 0; i < 24; i++)
       cy.get(GestaltTestPage.BIRTHDAY_PREV_MONTH).click();
     cy.get(GestaltTestPage.BIRTHDAY_DAY_5).first().click();
+    cy.get("body").click();
     cy.get(GestaltTestPage.FAVORITE_COLOR_DTI).click();
     cy.get(GestaltTestPage.COLOR_BLUE).click();
     cy.get(GestaltTestPage.ACCORDION_ARROW).click();
     cy.get(GestaltTestPage.ACCORDION).should("contain", "Name: Juan Benavides");
     cy.get(GestaltTestPage.ACCORDION).should("contain", "Age: 2");
     cy.get(GestaltTestPage.ACCORDION).should("contain", "Color: blue");
-    cy.get(GestaltTestPage.TAB_TAB_2).click();
+    cy.get(GestaltTestPage.TAB).contains("Images").click();
   });
 });

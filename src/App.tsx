@@ -1,8 +1,8 @@
 import "./App.css";
-import "./gestalt.css"
+import "./gestalt.css";
 import { Box, Divider } from "gestalt";
-import Header from "./Header";
-import Content from "./Content";
+import Header from "./header/Header";
+import Content from "./content/Content";
 
 function App() {
   return (

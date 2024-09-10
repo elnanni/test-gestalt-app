@@ -119,7 +119,9 @@ const Images = () => {
           )}
         />
       )}
-      <PageHeader /*dataTestId="masonryV2-header"*/ title={"Masonry V2 header"} />
+      <PageHeader
+        /*dataTestId="masonryV2-header"*/ title={"Masonry V2 header"}
+      />
       {scrollContainerRef.current && (
         <MasonryV2
           //dataTestId="masonryV2-container"
@@ -184,9 +186,13 @@ const Images = () => {
           ];
           const image = images[index] || {};
           return (
-            <Mask /*dataTestId="collage-mask"*/ height={height} wash width={width}>
+            <Mask
+              /*dataTestId="collage-mask"*/ height={height}
+              wash
+              width={width}
+            >
               <Image
-                //dataTestId={"collage-image-" + index}
+                dataTestId={"collage-image-" + index}
                 alt="collage image"
                 color={image.color}
                 fit="cover"

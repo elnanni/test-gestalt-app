@@ -120,9 +120,7 @@ const Randoms = () => {
           text: "Create Pin Menu",
         }}
       />
-      <Label /*dataTestId="label"*/ htmlFor="email">
-        Email
-      </Label>
+      <Label /*dataTestId="label"*/ htmlFor="email">Email</Label>
       <List label="label test" type="bare">
         <List.Item /*dataTestId="list-item-1"*/ text="List item text">
           <List.Item /*dataTestId="list-item-2"*/ text="List item text" />
