@@ -1,4 +1,4 @@
-import logo from "../gestalteers.png";
+import logo from "../resources/images/gestalteers.png";
 import { Box, WashAnimated, Image, Text, ButtonLink, Flex } from "gestalt";
 
 const Logo = () => {
