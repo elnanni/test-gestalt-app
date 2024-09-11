@@ -1,4 +1,4 @@
-import { Box, Link, Text } from "gestalt";
+import { Link, Text } from "gestalt";
 
 const Slogan = () => {
   return (
