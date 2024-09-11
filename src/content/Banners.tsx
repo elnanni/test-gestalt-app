@@ -87,7 +87,9 @@ const Banners = () => {
         <BannerSlim /* dataTestId="banner-slim" */ message="Banner Slim" />
       </Box>
       <Box padding={3}>
-        <BannerUpsell /* dataTestId="banner-upsell" */ message="Banner Upsell" />
+        <BannerUpsell
+          /* dataTestId="banner-upsell" */ message="Banner Upsell"
+        />
       </Box>
       <Box padding={3}>
         <BannerCallout

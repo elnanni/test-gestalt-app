@@ -1,10 +1,8 @@
-import { Badge, Box, Pog, Tabs } from "gestalt";
+import { Box, Pog } from "gestalt";
 import { useState } from "react";
-import Images from "./Images";
-import Banners from "./Banners";
-import Randoms from "./Randoms";
-import PersonalData from "./PersonalData";
 import PersonalAvatar from "./PersonalAvatar";
+import ContentTabs from "./ContentTabs";
+import ActiveContent from "./ActiveContent";
 
 const Content = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -21,40 +19,10 @@ const Content = () => {
     >
       <Box display="inlineBlock">
         <PersonalAvatar />
-        <Tabs
-          // dataTestId="options-tabs"
-          bgColor="transparent"
-          activeTabIndex={activeIndex}
-          onChange={({ activeTabIndex, event }: any) => {
-            event.preventDefault();
-            setActiveIndex(activeTabIndex);
-          }}
-          tabs={[
-            { href: "#", text: "Personal data" },
-            { href: "#", text: "Images" },
-            {
-              href: "#",
-              text: (
-                <Box>
-                  Banners{" "}
-                  <Badge
-                    dataTestId="badge-new"
-                    text="New"
-                    type="recommendation"
-                    tooltip={{ text: "New" }}
-                  />
-                </Box>
-              ),
-            },
-            { href: "#", text: "Randoms" },
-          ]}
-        />
+        <ContentTabs setParentActiveIndex={setActiveIndex} />
       </Box>
       <Box color="light">
-        {activeIndex === 0 && <PersonalData />}
-        {activeIndex === 1 && <Images />}
-        {activeIndex === 2 && <Banners />}
-        {activeIndex === 3 && <Randoms />}
+        <ActiveContent index={activeIndex} />
       </Box>
       <Box margin={2} justifyContent="end" alignContent="end" display="flex">
         <Pog dataTestId="pog-heart" icon="heart" />
