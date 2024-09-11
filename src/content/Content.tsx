@@ -11,11 +11,13 @@ const Content = () => {
 
   return (
     <Box
+      data-test-id="content"
       justifyContent="center"
       color="lightWash"
       margin={1}
       padding={4}
       minHeight="65vh"
+      width="100%"
     >
       <Box display="inlineBlock">
         <PersonalAvatar />

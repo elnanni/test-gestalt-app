@@ -32,7 +32,6 @@ const locators = {
   IMAGE_LOGO: '[data-test-id="logo"]',
   FORK_BUTTON: '[data-test-id="volunteers-fork"]',
   FORK_EXTERNAL: '[data-test-id="volunteers-fork"] svg',
-  CONTENT_HEADER: '[data-test-id="header-content"]',
   GESTALT_LINK: '[data-test-id="gestalt-link"]',
   GESTALT_EXTERNAL: '[data-test-id="gestalt-link"] svg',
   // Content

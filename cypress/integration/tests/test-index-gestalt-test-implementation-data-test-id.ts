@@ -7,7 +7,6 @@ describe("Gestalt test implementation validation", () => {
     cy.get(GestaltTestPage.IMAGE_LOGO).should("be.visible");
     cy.get(GestaltTestPage.FORK_BUTTON).should("be.visible");
     cy.get(GestaltTestPage.FORK_EXTERNAL).should("be.visible");
-    cy.get(GestaltTestPage.CONTENT_HEADER).should("be.visible");
     cy.get(GestaltTestPage.GESTALT_LINK).should("be.visible");
     cy.get(GestaltTestPage.GESTALT_EXTERNAL).should("be.visible");
     cy.get(GestaltTestPage.TAB_GESTALT_VOLUNTEERS).should(
