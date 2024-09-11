@@ -11,7 +11,7 @@ const Content = () => {
 
   return (
     <Box
-      data-test-id="content"
+      data-test-id="app-content"
       justifyContent="center"
       color="lightWash"
       margin={1}
@@ -22,7 +22,7 @@ const Content = () => {
       <Box display="inlineBlock">
         <PersonalAvatar />
         <Tabs
-          //dataTestId="options-tabs"
+          // dataTestId="options-tabs"
           bgColor="transparent"
           activeTabIndex={activeIndex}
           onChange={({ activeTabIndex, event }: any) => {

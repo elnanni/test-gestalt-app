@@ -1,5 +1,5 @@
 import "./gestalt.css";
-import { Box, Flex } from "gestalt";
+import { Flex } from "gestalt";
 import Header from "./header/Header";
 import Content from "./content/Content";
 

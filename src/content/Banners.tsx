@@ -84,21 +84,21 @@ const Banners = () => {
         </Box>
       )}
       <Box padding={3}>
-        <BannerSlim /*dataTestId="banner-slim"*/ message="Banner Slim" />
+        <BannerSlim /* dataTestId="banner-slim" */ message="Banner Slim" />
       </Box>
       <Box padding={3}>
-        <BannerUpsell /*dataTestId="banner-upsell"*/ message="Banner Upsell" />
+        <BannerUpsell /* dataTestId="banner-upsell" */ message="Banner Upsell" />
       </Box>
       <Box padding={3}>
         <BannerCallout
-          //dataTestId="banner-callout"
+          // dataTestId="banner-callout"
           message="Banner Callout"
           type={"error"}
         />
       </Box>
       <Box padding={3}>
         <BannerOverlay
-          /*dataTestId="banner-overlay"*/ message="Banner Overlay"
+          /* dataTestId="banner-overlay" */ message="Banner Overlay"
         />
       </Box>
       <Box padding={3}>
@@ -112,7 +112,7 @@ const Banners = () => {
       <Box width="300px" margin={4}>
         <Badge dataTestId="badge" text="Side Nav" type="recommendation" />
         <SideNavigation
-          //dataTestId="side-navigation"
+          // dataTestId="side-navigation"
           accessibilityLabel="Side Nav"
         >
           <SideNavigation.Group label="sn-group">
@@ -126,7 +126,7 @@ const Banners = () => {
       </Box>
       <Datapoint
         badge={{ text: "Early access" }}
-        //dataTestId="data-point"
+        // dataTestId="data-point"
         title="Title"
         tooltipText="This is a good sign"
         trend={{

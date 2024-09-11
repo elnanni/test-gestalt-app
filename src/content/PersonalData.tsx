@@ -69,7 +69,7 @@ const PersonalData = () => {
 
   return (
     <Accordion.Expandable
-      //dataTestId="personal-data-accordion"
+      // dataTestId="personal-data-accordion"
       borderStyle="shadow"
       id="personal-data"
       items={[
@@ -176,7 +176,7 @@ const PersonalData = () => {
                   value={pName}
                 />
                 <DatePicker
-                  //dataTestId="birthday"
+                  // dataTestId="birthday"
                   ref={ref}
                   placeholder="Enter birthday"
                   value={birthday}
