@@ -1,11 +1,13 @@
 import {
   Accordion,
   Box,
+  Button,
   Checkbox,
   ComboBox,
   Fieldset,
   FixedZIndex,
   Image,
+  OverlayPanel,
   RadioButton,
   RadioGroup,
   SearchField,
@@ -67,6 +69,8 @@ const PersonalData = () => {
     getData();
   }, []);
 
+  const [showOverlay, setShowOverlay] = useState(false);
+
   return (
     <Accordion.Expandable
       // dataTestId="personal-data-accordion"
@@ -77,6 +81,28 @@ const PersonalData = () => {
           children: (
             <Box justifyContent="start" display="flex">
               <Box display="inlineBlock" padding={2}>
+                <Button
+                  dataTestId="show-overlay"
+                  text="Show overlay"
+                  onClick={() => setShowOverlay(true)}
+                />
+                {showOverlay && (
+                  <OverlayPanel
+                    accessibilityDismissButtonLabel="Dismiss"
+                    accessibilityLabel="OverlayPanel"
+                    closeOnOutsideClick
+                    // dataTestId="overlay-panel"
+                    footer={<footer />}
+                    heading="OverlayPanel title"
+                    onDismiss={() => {
+                      setShowOverlay(false);
+                    }}
+                    size="sm"
+                    subHeading={<nav />}
+                  >
+                    <Text>Text</Text>
+                  </OverlayPanel>
+                )}
                 <Fieldset dataTestId="choose-pokemon" legend="Choose a Pokemon">
                   <Box padding={2}>
                     <SearchField
@@ -95,7 +121,7 @@ const PersonalData = () => {
                       <Box
                         zIndex={new FixedZIndex(1)}
                         overflow="scroll"
-                        height={300}
+                        height={100}
                         padding={2}
                       >
                         <Accordion
@@ -115,7 +141,11 @@ const PersonalData = () => {
                                 data.map(
                                   (pokemon: any) =>
                                     pokemon.name.includes(searchValue) && (
-                                      <Box key={pokemon.name} padding={2}>
+                                      <Box
+                                        data-test-id="filtered-pokemons"
+                                        key={pokemon.name}
+                                        padding={2}
+                                      >
                                         <TapArea
                                           key={pokemon.name}
                                           onTap={() => {

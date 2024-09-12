@@ -1,21 +1,21 @@
 import * as React from "react";
-import ActiveContent from "../../../src/content/ActiveContent";
+import { actions } from "./ActiveContentActions";
 
 describe("Validates active content", () => {
   it("Validates Personal data content selected", () => {
-    cy.mount(<ActiveContent index={0} />);
-    cy.get('[aria-controls="personal-data-0"]').should("be.visible");
+    actions.mountActiveContent(0);
+    actions.validatePersonalDataSelected();
   });
   it("Validates Images content selected", () => {
-    cy.mount(<ActiveContent index={1} />);
-    cy.get('[data-test-id="collage-image-0"]').should("be.visible");
+    actions.mountActiveContent(1);
+    actions.validateImagesSelected();
   });
   it("Validates Banners content selected", () => {
-    cy.mount(<ActiveContent index={2} />);
-    cy.get('[data-test-id="test-accordion-text"]').should("be.visible");
+    actions.mountActiveContent(2);
+    actions.validateBannersSelected();
   });
   it("Validates Randoms content selected", () => {
-    cy.mount(<ActiveContent index={3} />);
-    cy.get('[data-test-id="show-modal"]').should("be.visible");
+    actions.mountActiveContent(3);
+    actions.validateRandomsSelected();
   });
 });
