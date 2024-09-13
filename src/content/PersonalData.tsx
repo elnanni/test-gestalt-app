@@ -5,18 +5,16 @@ import {
   Checkbox,
   ComboBox,
   Fieldset,
-  FixedZIndex,
   Image,
   OverlayPanel,
   RadioButton,
   RadioGroup,
-  SearchField,
-  TapArea,
   Text,
   TextField,
 } from "gestalt";
 import { DatePicker } from "gestalt-datepicker";
-import { ReactNode, useEffect, useRef, useState } from "react";
+import { ReactNode, useRef, useState } from "react";
+import SearchPokemon from "./SearchPokemon";
 
 interface colorData {
   label: string;
@@ -27,13 +25,8 @@ interface colorData {
 const PersonalData = () => {
   const ref = useRef(null);
   const [pName, setPersonalName] = useState("");
-  const [searchValue, setSearchValue] = useState("");
   const [birthday, setBirthday] = useState<Date | null>(null);
   const [color, setColor] = useState<colorData | null>(null);
-  const [hideSearch, setHideSearch] = useState(true);
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(false);
   const [checked, setChecked] = useState(false);
   const [checkBoxError, setCheckBoxError]: [ReactNode | undefined, any] =
     useState(undefined);
@@ -45,29 +38,6 @@ const PersonalData = () => {
       ) : undefined,
     );
   };
-
-  useEffect(() => {
-    const getData = async () => {
-      const url = "https://pokeapi.co/api/v2/pokemon?limit=151";
-
-      try {
-        const resp = await fetch(url);
-        const data = await resp.json();
-        if (!resp.ok) {
-          throw new Error("Network response was not ok.");
-        }
-        // Do anything you need to do to
-        // data before this call:
-        setData(data.results);
-        setLoading(false);
-      } catch (err) {
-        setError(true);
-        setLoading(false);
-      }
-    };
-
-    getData();
-  }, []);
 
   const [showOverlay, setShowOverlay] = useState(false);
 
@@ -103,77 +73,10 @@ const PersonalData = () => {
                     <Text>Text</Text>
                   </OverlayPanel>
                 )}
-                <Fieldset dataTestId="choose-pokemon" legend="Choose a Pokemon">
-                  <Box padding={2}>
-                    <SearchField
-                      accessibilityLabel="Demo Search Field"
-                      autoComplete="off"
-                      dataTestId="test-searchfield"
-                      id="searchField"
-                      onChange={({ value }: any) => {
-                        setSearchValue(value);
-                      }}
-                      onFocus={() => setHideSearch(false)}
-                      placeholder="Search and explore"
-                      value={searchValue}
-                    />
-                    {!!!hideSearch && searchValue !== "" && (
-                      <Box
-                        zIndex={new FixedZIndex(1)}
-                        overflow="scroll"
-                        height={100}
-                        padding={2}
-                      >
-                        <Accordion
-                          dataTestId="test-search-accordion"
-                          id="accordion-search"
-                          title="Search Pokemon"
-                          type="info"
-                        >
-                          {loading ? (
-                            <Box>Loading...</Box>
-                          ) : error ? (
-                            <Box>Error: {error}</Box>
-                          ) : (
-                            <Box>
-                              {!!!loading && data ? (
-                                // @ts-ignore:next-line
-                                data.map(
-                                  (pokemon: any) =>
-                                    pokemon.name.includes(searchValue) && (
-                                      <Box
-                                        data-test-id="filtered-pokemons"
-                                        key={pokemon.name}
-                                        padding={2}
-                                      >
-                                        <TapArea
-                                          key={pokemon.name}
-                                          onTap={() => {
-                                            setSearchValue(pokemon.name);
-                                            setHideSearch(true);
-                                          }}
-                                          tapStyle="compress"
-                                        >
-                                          <Text
-                                            dataTestId={pokemon.name}
-                                            key={pokemon.name}
-                                          >
-                                            {pokemon.name}
-                                          </Text>
-                                        </TapArea>
-                                      </Box>
-                                    ),
-                                )
-                              ) : (
-                                <Text>Loading...</Text>
-                              )}
-                            </Box>
-                          )}
-                        </Accordion>
-                      </Box>
-                    )}
-                  </Box>
-                </Fieldset>
+                <Box marginBottom={5}>
+                  <SearchPokemon />
+                  <Box height={70}></Box>
+                </Box>
                 <Fieldset
                   dataTestId="test-fieldset"
                   errorMessage="At least 1 item must be selected"

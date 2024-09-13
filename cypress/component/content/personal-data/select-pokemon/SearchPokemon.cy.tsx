@@ -1,10 +1,9 @@
 import * as React from "react";
-import PersonalData from "../../../../../src/content/PersonalData";
+import SearchPokemon from "../../../../../src/content/SearchPokemon";
 
-describe("Validates Personal data UI", () => {
-  it("Validates Personal data choose a Pokemon", () => {
-    cy.mount(<PersonalData />);
-    cy.get('[id="personal-data-0"]').click();
+describe("Validates Select Pokemon", () => {
+  it("Validates choose a Pokemon", () => {
+    cy.mount(<SearchPokemon />);
     cy.get('[data-test-id="choose-pokemon"]').should("be.visible");
     cy.get('[data-test-id="choose-pokemon-legend"]').should(
       "contain",
@@ -13,20 +12,17 @@ describe("Validates Personal data UI", () => {
     cy.get('[data-test-id="test-searchfield-search-icon"]').should(
       "be.visible",
     );
-    cy.get('[data-test-id="test-searchfield"]').clear().type("bu");
+    cy.get('[data-test-id="test-searchfield"]')
+      .clear({ force: true })
+      .type("bu", { force: true });
     cy.get('[data-test-id="test-searchfield-cancel-icon"]').should(
       "be.visible",
     );
     cy.get('[data-test-id="test-searchfield-search-icon"]').should("not.exist");
   });
-  it("Validates Personal data choose a Pokemon auto complete", () => {
-    cy.mount(<PersonalData />);
-    cy.get('[id="personal-data-0"]').click();
+  it("Validates choose a Pokemon auto complete", () => {
+    cy.mount(<SearchPokemon />);
     cy.get('[data-test-id="test-searchfield"]').clear().type("bu");
-    cy.get('[data-test-id="test-search-accordion-text"]').should(
-      "contain",
-      "Search Pokemon",
-    );
     cy.get('[data-test-id="filtered-pokemons"]').should("have.length", 5);
     const pokemonsFiltered = [
       "bulbasaur",
@@ -42,12 +38,10 @@ describe("Validates Personal data UI", () => {
       },
     );
   });
-  it("Validates Personal data select a Pokemon", () => {
-    cy.mount(<PersonalData />);
-    cy.get('[id="personal-data-0"]').click();
+  it("Validates select a Pokemon", () => {
+    cy.mount(<SearchPokemon />);
     cy.get('[data-test-id="test-searchfield"]').clear().type("pikachu");
     cy.get('[data-test-id="filtered-pokemons"]').click();
-    cy.get('[data-test-id="test-search-accordion-text"]').should("not.exist");
     cy.get('[data-test-id="test-searchfield"]').should(
       "have.attr",
       "value",
@@ -57,9 +51,8 @@ describe("Validates Personal data UI", () => {
       "be.visible",
     );
   });
-  it("Validates Personal data clear Pokemon selected by using cancel icon", () => {
-    cy.mount(<PersonalData />);
-    cy.get('[id="personal-data-0"]').click();
+  it("Validates clear Pokemon selected by using cancel icon", () => {
+    cy.mount(<SearchPokemon />);
     cy.get('[data-test-id="test-searchfield"]').clear().type("pikachu");
     cy.get('[data-test-id="filtered-pokemons"]').click();
     cy.get('[data-test-id="test-searchfield-cancel-icon"]').click();

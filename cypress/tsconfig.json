@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": "http://localhost:3000",
     "jsx": "react",
     "target": "es5",
     "lib": ["es5", "dom"],

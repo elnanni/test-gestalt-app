@@ -21,7 +21,7 @@ const Content = () => {
         <PersonalAvatar />
         <ContentTabs setParentActiveIndex={setActiveIndex} />
       </Box>
-      <Box color="light">
+      <Box color="light" margin={2}>
         <ActiveContent index={activeIndex} />
       </Box>
       <Box margin={2} justifyContent="end" alignContent="end" display="flex">
