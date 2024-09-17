@@ -2,7 +2,7 @@ import { Box, Button, Fieldset, Popover, SearchField, Text } from "gestalt";
 import { useEffect, useRef, useState } from "react";
 
 const SearchPokemon = () => {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState(() => null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   const [pokemonError, setPokemonError] = useState("");
@@ -75,7 +75,7 @@ const SearchPokemon = () => {
                   <Box maxHeight={110}>
                     {!!!loading && data ? (
                       // @ts-ignore:next-line
-                      data.map(
+                      data && data.map(
                         (pokemon: any) =>
                           pokemon.name.includes(searchValue) && (
                             <Box
@@ -93,7 +93,7 @@ const SearchPokemon = () => {
                                 size="sm"
                                 text={pokemon.name}
                                 fullWidth
-                                color="red"
+                                color="semiTransparentWhite"
                               />
                             </Box>
                           ),
