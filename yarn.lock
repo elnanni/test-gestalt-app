@@ -4526,7 +4526,7 @@ dir-glob@^3.0.1:
   dependencies:
     path-type "^4.0.0"
 
-"dist@link:../gestalt/packages/gestalt/dist":
+"dist@link:./gestalt/packages/gestalt/dist":
   version "0.0.0"
   uid ""
 
@@ -5672,13 +5672,13 @@ gensync@^1.0.0-beta.2:
   resolved "https://registry.yarnpkg.com/gensync/-/gensync-1.0.0-beta.2.tgz#32a6ee76c3d7f52d46b2b1ae5d93fea8580a25e0"
   integrity sha512-3hN7NaskYvMDLQY55gnW3NQ+mesEAepTqlg+VEbj7zzqEMBVNhzcGYYeqFo/TlYz6eQiFcp1HcsCZO+nGgS8zg==
 
-gestalt-charts@../gestalt/packages/gestalt-charts:
-  version "157.6.0"
+gestalt-charts@./gestalt/packages/gestalt-charts:
+  version "159.8.1"
   dependencies:
     recharts "2.8.0"
 
-gestalt-datepicker@../gestalt/packages/gestalt-datepicker:
-  version "157.6.0"
+gestalt-datepicker@./gestalt/packages/gestalt-datepicker:
+  version "159.8.1"
   dependencies:
     "@emotion/react" "^11.10.6"
     "@emotion/styled" "^11.10.6"
@@ -5692,8 +5692,8 @@ gestalt-design-tokens@>0.0.0:
   resolved "https://registry.yarnpkg.com/gestalt-design-tokens/-/gestalt-design-tokens-157.5.3.tgz#9defd0741f57ad7292a5d60470f634eac5e96356"
   integrity sha512-W+QBoX3SVOjqFu1KWLXxrnHBOvX2OQiOemCyNwyIKmhRlyS/WPwsUpIP8s+9bSa7iqtAgvElHSDSFtS4K19c1A==
 
-gestalt@../gestalt/packages/gestalt:
-  version "157.6.0"
+gestalt@./gestalt/packages/gestalt:
+  version "159.8.1"
   dependencies:
     "@floating-ui/react" "^0.25.4"
     classnames "^2.2.6"
