@@ -65,15 +65,14 @@ const SearchPokemon = () => {
               size="lg"
               errorMessage={pokemonError}
             />
+            </Box>
+            <Box color="transparent">
             {!!!hideSearch && (
-              <Box overflow="scroll">
-                {loading ? (
-                  <Box>Loading...</Box>
-                ) : error ? (
+                error ? (
                   <Box>Error: {error}</Box>
                 ) : (
-                  <Box maxHeight={110}>
-                    {!!!loading && data ? (
+                  <Box overflow="scroll" maxHeight={110}>
+                    {!!!loading && data && (
                       // @ts-ignore:next-line
                       data && data.map(
                         (pokemon: any) =>
@@ -98,12 +97,9 @@ const SearchPokemon = () => {
                             </Box>
                           ),
                       )
-                    ) : (
-                      <Text>Loading...</Text>
                     )}
                   </Box>
-                )}
-              </Box>
+                )
             )}
           </Box>
         </Popover>
